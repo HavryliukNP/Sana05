@@ -1,5 +1,9 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿
 using Tasks;
 
-Console.WriteLine("Hello, World!");
-MyDate myDate = new MyDate(2023, 12, 11, 16, 0); 
+
+MyDate myStartDate = new MyDate(2023, 12, 11, 16, 0);
+MyDate myFinishDate = new MyDate(2023, 12, 11, 18, 30);
+
+Airplane myAirplane = new Airplane("Місто1", "Місто2", myStartDate, myFinishDate);
+Console.WriteLine(myAirplane.GetTotalTime());

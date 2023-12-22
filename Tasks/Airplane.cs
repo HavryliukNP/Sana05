@@ -20,5 +20,15 @@ namespace Tasks
             StartDate = startDate;
             FinishDate = finishDate;
         }
+        public int GetTotalTime()
+        {
+            DateTime startDateTime = new DateTime(StartDate.Year, StartDate.Month, 
+                StartDate.Day, StartDate.Hours, StartDate.Minutes, 0);
+            DateTime finishDateTime = new DateTime(FinishDate.Year, FinishDate.Month, 
+                FinishDate.Day, FinishDate.Hours, FinishDate.Minutes, 0);
+            TimeSpan duration = finishDateTime - startDateTime;
+
+            return (int)duration.TotalMinutes;
+        }
     }
 }
