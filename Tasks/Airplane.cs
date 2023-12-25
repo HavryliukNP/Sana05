@@ -26,9 +26,18 @@ namespace Tasks
                 StartDate.Day, StartDate.Hours, StartDate.Minutes, 0);
             DateTime finishDateTime = new DateTime(FinishDate.Year, FinishDate.Month, 
                 FinishDate.Day, FinishDate.Hours, FinishDate.Minutes, 0);
-            TimeSpan duration = finishDateTime - startDateTime;
+            TimeSpan getTotalTime = finishDateTime - startDateTime;
 
-            return (int)duration.TotalMinutes;
+            return (int)getTotalTime.TotalMinutes;
+        }
+        public bool IsArrivingToday()
+        {
+            bool isArrivingToday = false;
+
+            if(StartDate.Day == FinishDate.Day)
+                isArrivingToday = true;
+
+            return isArrivingToday;
         }
     }
 }

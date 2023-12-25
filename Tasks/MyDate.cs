@@ -8,11 +8,37 @@ namespace Tasks
 {
     public class MyDate
     {
-        public int Year { get; set; }
-        public int Month { get; set; }
-        public int Day { get; set; }
-        public int Hours { get; set; }
-        public int Minutes { get; set; }
+        protected int year;
+        protected int month;
+        protected int day;
+        protected int hours;
+        protected int minutes;
+
+        public int Year
+        {
+            get { return year; }
+            protected set { year = value; }
+        }
+        public int Month
+        {
+            get { return month; }
+            protected set { month = value; }
+        }
+        public int Day
+        {
+            get { return day; }
+            protected set { day = value; }
+        }
+        public int Hours
+        {
+            get { return hours; }
+            protected set { hours = value; }
+        }
+        public int Minutes
+        {
+            get { return minutes; }
+            protected set { minutes = value; }
+        }
 
         public MyDate(int year, int month, int day, int hours, int minutes)
         {
