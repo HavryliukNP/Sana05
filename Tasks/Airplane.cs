@@ -8,10 +8,10 @@ namespace Tasks
 {
     public class Airplane
     {
-        public string StartCity { get; set; }
-        public string FinishCity { get; set; }
-        public MyDate StartDate { get; set; }
-        public MyDate FinishDate { get; set; }
+        protected string StartCity { get; set; }
+        protected string FinishCity { get; set; }
+        protected MyDate StartDate { get; set; }
+        protected MyDate FinishDate { get; set; }
 
         public Airplane(string startCity, string finishCity, MyDate startDate, MyDate finishDate)
         {
