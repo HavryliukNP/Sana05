@@ -48,5 +48,29 @@ namespace Tasks
             Hours = hours;
             Minutes = minutes;
         }
+        public MyDate()
+        {
+            Year = 1;
+            Month = 1;
+            Day = 1;
+            Hours = 1;
+            Minutes = 0;
+        }
+        public MyDate(DateTime dateTime)
+        {
+            Year = dateTime.Year;
+            Month = dateTime.Month;
+            Day = dateTime.Day;
+            Hours = dateTime.Hour;
+            Minutes = dateTime.Minute;
+        }
+        public MyDate(MyDate myDate)
+        {
+            Year = myDate.Year;
+            Month = myDate.Month;
+            Day = myDate.Day;
+            Hours = myDate.Hours;
+            Minutes = myDate.Minutes;
+        }
     }
 }
