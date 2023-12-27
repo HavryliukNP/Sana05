@@ -26,6 +26,20 @@ namespace Tasks
             Name = name;
             ExRate = exRate;
         }
-        
+        public Currency()
+        {
+            Name = "USD";
+            ExRate = 37;
+        }
+        public Currency(Currency currency)
+        {
+            Name = currency.Name;
+            ExRate = currency.ExRate;
+        }
+        public Currency(string name, int exRate)
+        {
+            Name = name;
+            ExRate = exRate;
+        }
     }
 }
