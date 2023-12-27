@@ -9,7 +9,7 @@ namespace Tasks
     public class Product
     {
         protected string Name { get; set; }
-        protected int Price { get; set; }
+        protected double Price { get; set; }
         protected Currency Cost { get; set; }
         protected int Quantity { get; set; }
         protected string Producer { get; set; }
@@ -38,6 +38,32 @@ namespace Tasks
         {
             double totalWeight = Weight * Quantity;
             return totalWeight;
+        }
+        public Product()
+        {
+            Cost = new Currency();
+        }
+        public Product(Product product)
+        {
+            Name = product.Name;
+            Price = product.Price;
+            Cost = product.Cost;
+            Quantity = product.Quantity;
+            Producer = product.Producer;
+            Weight = product.Weight;
+        }
+        public Product(Currency cost)
+        {
+            Cost = new Currency(cost);
+        }
+        public Product(string name, double price, Currency cost, int quantity, string producer, double weight)
+        {
+            Name = name;
+            Price = price;
+            Cost = cost;
+            Quantity = quantity;
+            Producer = producer;
+            Weight = weight;
         }
     }
 }
