@@ -39,5 +39,24 @@ namespace Tasks
 
             return isArrivingToday;
         }
+        public Airplane()
+        {
+            StartDate = new MyDate();
+            FinishDate = new MyDate();
+        }
+        public Airplane(Airplane airplane)
+        {
+            StartCity = airplane.StartCity;
+            FinishCity = airplane.FinishCity;
+            StartDate = airplane.StartDate;
+            FinishDate = airplane.FinishDate;
+        }
+        public Airplane(string startCity, string finishCity, DateTime startDate, DateTime finishDate)
+        {
+            StartCity = startCity;
+            FinishCity = finishCity;
+            StartDate = new MyDate(startDate);
+            FinishDate = new MyDate(finishDate);
+        }
     }
 }
